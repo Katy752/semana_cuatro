@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alumnos</title>
+</head>
+<body>
+{% if alumno %}
+  <h1>Alumno</h1>
+       <table class="table table-striped">
+           <tr>
+               <th>Nombre</th>
+               <th>Correo</th>
+               <th>Dirección</th>
+               <th>Teléfono</th>
+               <th>Edad</th>
+               <th>Activo</th>
+               <th>Cantidad Materia</th>
+
+           </tr>
+                <tr>
+                      <td>{{ alumno.nombre}}</td>
+                      <td>{{ alumno.correo}}</td>
+                      <td>{{ alumno.direccion}}</td>
+                      <td>{{ alumno.telefono}}</td>
+                      <td>{{ alumno.edad}}</td>
+                      <td>{{ alumno.activo}}</td>
+                      <td>{{ alumno.id}}</td>
+
+                </tr>
+           </table>
+
+       {% else %}
+       <p>Objeto no encontrado</p>
+{% endif %}
+
+</body>
+</html>

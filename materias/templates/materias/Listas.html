@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Materias</title>
+</head>
+    <h1>Lista de Materias</h1>
+    <p>Click en el nombre para ver detalles de la Materia</p>
+    {% if materias %}
+       <table class="table table-striped">
+           <tr>
+               <th>Nombre</th>
+               <th>Correo</th>
+           </tr>
+
+           {% for materia in materias %}
+
+              <tr>
+                  <td>{{forloop.counter}} <a href="http://127.0.0.1:8000/get_materias/{{materia.id}}">{{materia.nombre}}</a></td>
+                  <td>{{materia.correo}}</td>
+              </tr>
+
+           {% endfor %}
+       </table>
+    {% else %}
+        <p>No existen datos</p>
+    {% endif %}
+</div>
+</body>
+</html>
